@@ -1,0 +1,125 @@
+.video-container__body {
+  position: relative;
+  height: 420rpx;
+  width: 750rpx;
+  /* border-bottom: 1px solid red;
+  border-top: 1px solid red; */
+}
+
+
+.video-view__original {
+  height: 420rpx;
+  width: 100%;
+}
+.video-container {
+  position: relative;
+}
+.video-container .popup__content {
+  background: transparent;
+}
+.video-container .popup__content--right {
+  background-color: transparent;
+}
+
+.video-share-bar__wrap {
+  height: 60rpx;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 800;
+  overflow: hidden;
+}
+.video-share-bar__content {
+  height: 60rpx;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.video-share-bar__content .video-share-bar__inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.video-share-bar__inner .video-share-icon {
+  width: 31rpx;
+  height: 29rpx;
+  display: flex;
+  align-items: center;
+  margin-right: 44rpx;
+}
+.video-share-bar__inner .video-share-icon > image {
+  width: 100%;
+  height: 100%;
+}
+
+.video-control-bar-popup__wrap {
+  height: 60rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 600;
+  overflow: hidden;
+}
+.video-control__content {
+  height: 60rpx;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.video-channel-popup__wrap {
+  height: 100%;
+  width: 210rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1200;
+  overflow: hidden;
+}
+.video-channel-popup__content {
+  overflow: hidden;
+  height: 100%;
+  width: 210rpx;
+  /* background: #000000;
+  opacity: 0.2;
+  filter: alpha(opacity= 0.5); */
+  /* background: transparent; */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.video-channel-popup__content .channel-item__text {
+  font-size: 24rpx;
+  font-weight: 600;
+}
+.video-channel-popup__content .channel-list {
+  margin-top: 112rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.video-channel-popup__content .channel-item {
+  height: 48rpx;
+}
+.video-channel-popup__content .channel-item__inner {
+  height: 48rpx;
+  width: 88rpx;
+  display: flex;
+  line-height: 48rpx;
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-channel-popup__content .channel-item__inner.channel-item__checked {
+  border: 4rpx solid #54b0fb;
+  border-radius: 8rpx;
+  color: #54b0fb;
+}
+
+.video-channel-popup__content .channel-item + .channel-item {
+  margin-top: 27rpx;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wr-popup": "@retailwe/ui-popup/index",
+    "video-control-bar": "../VideoControlBar"
+  }
+}

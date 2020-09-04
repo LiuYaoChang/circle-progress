@@ -1,0 +1,66 @@
+.tag {
+  align-items: center;
+  line-height: normal;
+  padding: 0.2em 0.5em;
+  color: white;
+  font-size: 20rpx;
+  border-radius: 0.2em;
+}
+.tag::after {
+  border-color: currentColor;
+  border-radius: 0.4em;
+}
+.tag--default {
+  background-color: #969799;
+}
+.tag--default.tag--plain {
+  color: #969799;
+}
+.tag--danger {
+  background-color: #ee0a24;
+}
+.tag--danger.tag--plain {
+  color: #ee0a24;
+}
+.tag--primary {
+  background-color: #1989fa;
+}
+.tag--primary.tag--plain {
+  color: #1989fa;
+}
+.tag--success {
+  background-color: #07c160;
+}
+.tag--success.tag--plain {
+  color: #07c160;
+}
+.tag--warning {
+  background-color: #ff976a;
+}
+.tag--warning.tag--plain {
+  color: #ff976a;
+}
+.tag--plain {
+  background-color: white;
+}
+.tag--mark {
+  padding-right: 0.7em;
+}
+.tag--mark,
+.tag--mark::after {
+  border-radius: 0 999rpx 999rpx 0;
+}
+.tag--round,
+.tag--round::after {
+  border-radius: 999rpx;
+}
+.tag--medium {
+  font-size: 24rpx;
+}
+.tag--large {
+  font-size: 28rpx;
+}
+.tag__close {
+  margin-left: 4rpx;
+  font-size: 18rpx !important;
+}

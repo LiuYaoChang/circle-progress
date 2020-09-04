@@ -1,0 +1,12 @@
+.circle-progress__image {
+    width: 500rpx;
+    height: 500rpx;
+    position: relative;
+}
+
+.circle-progress__content {
+    position: absolute;
+    width: 50rpx;
+    height: 50rpx;
+    border: 1px solid red;
+}

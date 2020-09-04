@@ -1,0 +1,22 @@
+<view
+  class="wr-pull-down-refresh wr-class"
+  bindtap="onTap"
+  bind:touchstart="onTouchStart"
+  bind:touchmove="onTouchMove"
+  bind:touchend="onTouchEnd">
+  <view
+    id="refresh-bar"
+    class="refresh-bar {{refreshStatus === 2 ? 'refreshing' : refreshStatus === 3 ? 'success' : refreshStatus === 4 ? 'finishing' : ''}}"
+    style="height: {{barHeight + 'rpx'}}; background: {{background}}; color: {{color}}; font-size: {{fontSize}};">
+    <view
+      class="refresh-bar__content">
+      <view class="refresh-bar__loading" style="width: {{loadingSize}}; height: {{loadingSize}}; transform: rotate({{rotate}}deg);">
+        <image class="img" src="{{loadingImg}}" />
+      </view>
+      <view class="refresh-bar__text">{{text[refreshStatus]}}</view>
+    </view>
+  </view>
+  <view class="wr-pull-down-refresh__content">
+    <slot/>
+  </view>
+</view>

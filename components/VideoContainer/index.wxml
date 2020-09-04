@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view class="video-container">
+  <view class="video-container__body" bind:tap="handleTapVideo">
+    <view class="video-view__wrap">
+      <video
+        class="video-view__original"
+        id="myVideo" 
+        src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" 
+        binderror="videoErrorCallback"
+        bindtimeupdate="handleTimeUpdate"
+        bindplay="handleStartPlay"
+        bindprogress="handleBuffeChange"
+        controls="{{false}}"
+        bindloadedmetadata="loadMetadata"
+      ></video>
+    </view>
+  </view>
+  <view class="video-share-bar__wrap">
+    <wr-popup contentStyle="background-color: transparent;" zIndex="{{700}}" mask="{{false}}" fixed="{{false}}" show="{{showControlBar}}" position="top" bindclose="close">
+      <view class="video-share-bar__content">
+        <view class="video-share-bar__inner">
+          <view class="video-share-icon">
+            <image mode="aspectFit" src="{{shareIcon}}"></image>
+          </view>
+        </view>
+      </view>
+    </wr-popup>
+  </view>
+  <view class="video-control-bar-popup__wrap">
+    <wr-popup contentStyle="background-color: transparent;" zIndex="{{500}}" mask="{{false}}" fixed="{{false}}" show="{{showControlBar}}" position="bottom" bindclose="close">
+      <view class="video-control__content">
+        <video-control-bar status="{{isPlay}}" buffered="{{buffered}}" time="{{time}}" bind:change="handleMoveProgress" bind:play="handleTapPlay" channel="{{channel}}" bind:onPressChannel="handleChannelPress" duration="{{duration}}"></video-control-bar>
+      </view>
+    </wr-popup>
+  </view>
+  <!-- <view class="video-channel-popup__wrap" hidden="{{!showControlBar}}"> -->
+    <wr-popup contentStyle="background-color: transparent;" maskColor="rgba(0,0,0,0)" zIndex="{{1000}}" mask="{{true}}" maskClosable="{{true}}" fixed="{{false}}" show="{{showChannelPopups}}" position="right" bind:close="closeChannel">
+      <view class="video-channel-popup__content">
+        <view class="channel-list">
+          <view class="channel-item" wx:key="id" wx:for="{{options}}" data-id="{{item.id}}" bind:tap="handleSelectChannel">
+            <view class="channel-item__inner {{selected == item.id ? 'channel-item__checked' : ''}}">
+              <text class="channel-item__text">{{item.name}}</text>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </wr-popup>
+  <!-- </view> -->
+</view>

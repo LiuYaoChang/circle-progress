@@ -1,0 +1,6 @@
+.wr-goods-card__title__prefix-tags .prefix-tag .tag {
+  font-size: 20rpx;
+  font-weight: bold;
+  border-radius: 4rpx;
+  padding: 4rpx 8rpx;
+}

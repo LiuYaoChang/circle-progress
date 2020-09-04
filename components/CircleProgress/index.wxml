@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="circle-progress">
+  <view class="circle-progress__image">
+    <mp-progress config="{{config}}" percentage="{{percentage}}"></mp-progress>
+    <!-- <view class="circle-progress__content">
+
+    </view> -->
+  </view>
+</view>
+

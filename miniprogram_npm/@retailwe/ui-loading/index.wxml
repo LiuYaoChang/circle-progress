@@ -1,0 +1,48 @@
+<wxs module="utils">
+  var REGEXP = getRegExp('^\d+(\.\d+)?$');
+  function addUnit(value) {
+    if (value == null) {
+      return undefined;
+    }
+    return REGEXP.test('' + value) ? value + 'px' : value;
+  }
+
+  module.exports = {
+    addUnit: addUnit
+  };
+
+</wxs>
+
+<view class="wr-class loading {{ vertical ? 'loading--vertical' : '' }}">
+  <view
+    class="loading__spinner loading__spinner--{{ type }} {{reverse ? 'reverse' : ''}}"
+    style="color: {{ color }}; width: {{ utils.addUnit(size) }}; height: {{ utils.addUnit(size) }}; {{duration ? 'animation-duration: ' + duration + 's;' : ''}} animation-play-state: {{paused ? 'paused' : 'running'}};"
+  >
+    <view
+      wx:if="{{ type === 'spinner' }}"
+      wx:for="item in 12"
+      wx:key="index"
+      class="loading__dot"
+    />
+    <block wx:if="{{ type === 'circular-ext' }}">
+      <view
+        class="loading__mask1"
+        style="background: linear-gradient(to right, currentColor 12.5%, {{backgroundColor}} 87.5%);"
+      />
+      <view
+        class="loading__mask2"
+      />
+      <view
+        class="loading__mask3"
+        style="background-color: {{backgroundColor}};"
+      />
+      <view
+        class="loading__mask4"
+        style="background-color: {{backgroundColor}};"
+      />
+    </block>
+  </view>
+  <view class="loading__text" style="font-size: {{ utils.addUnit(textSize) }}; color: {{textColor}}">
+    <slot />
+  </view>
+</view>

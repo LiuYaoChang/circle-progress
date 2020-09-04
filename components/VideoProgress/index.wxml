@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="video-progress">
+  <view class="video-progress__content">
+    <view class="video-plaied-times">
+      <text class="video-plaied-time__text">{{timeStr}}</text>
+    </view>
+    <view class="move-area__wrap">
+      <movable-area>
+        <view class="video-play-progress-bar__wrap">
+          <view class="progress-box progress-box__background">
+            <view class="video-progress__content"></view>
+          </view>
+          <view class="progress-box progress-box__buffered" style="width: {{buffered}}%">
+            <view class="video-progress__content"></view>
+          </view>
+          <view class="progress-box progress-box__plaied" style="width: {{plaied}}%">
+            <view class="video-progress__content"></view>
+          </view>
+          <movable-view x="{{moveViewX}}" direction="horizontal" bindchange="handleMove">
+            <view class="progress-dot__wrap">
+              <image mode="aspectFit" src="{{src}}"></image>
+            </view>
+          </movable-view>
+        </view>
+      </movable-area>
+    </view>
+    <view class="video-plaied-times duration">
+      <text class="video-plaied-time__text">{{durationStr}}</text>
+    </view>
+  </view>
+
+</view>

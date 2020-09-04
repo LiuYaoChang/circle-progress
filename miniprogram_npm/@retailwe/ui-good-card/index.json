@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wr-tag": "@retailwe/ui-tag/index",
+    "wr-price": "@retailwe/ui-price/index",
+    "wr-icon": "@retailwe/ui-icon/index"
+  }
+}

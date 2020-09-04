@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wr-goods-card": "@retailwe/ui-good-card/index",
+    "wr-add-cart": "@retailwe/ui-add-cart/index",
+    "wr-tag": "@retailwe/ui-tag/index"
+  }
+}

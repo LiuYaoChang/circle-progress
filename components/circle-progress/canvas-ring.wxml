@@ -1,0 +1,7 @@
+<canvas style="width:{{canvasWidth}}px;height:{{canvasWidth}}px;" canvas-id="circleBar">
+  <view hidden="{{slot}}" class="circle-bar-wrap" style="height:{{canvasWidth}}px;">
+    <view class="val" style="color: {{valueColor}}; margin-top:{{isMarginTop?'20':'0'}}rpx">
+      {{value}} {{suffix}}
+    </view>
+  </view>
+</canvas>

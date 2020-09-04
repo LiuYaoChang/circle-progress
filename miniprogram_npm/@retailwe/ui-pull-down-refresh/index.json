@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wr-loading": "@retailwe/ui-loading/index"
+  }
+}

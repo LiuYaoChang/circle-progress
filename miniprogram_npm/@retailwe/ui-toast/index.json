@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wr-icon": "@retailwe/ui-icon/index"
+  }
+}

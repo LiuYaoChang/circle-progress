@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wr-pull-down-refresh": "@retailwe/ui-pull-down-refresh/index",
+    "wr-load-more": "@retailwe/ui-load-more/index"
+  }
+}

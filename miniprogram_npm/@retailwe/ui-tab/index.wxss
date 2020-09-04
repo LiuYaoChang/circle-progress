@@ -1,0 +1,38 @@
+.order-nav {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 30rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  color: #333;
+  overflow-x: scroll;
+  line-height: 96rpx;
+}
+.order-nav .order-nav-item {
+  text-align: center;
+  position: relative;
+}
+.order-nav .order-nav-item > .txt {
+  display: block;
+}
+.order-nav .order-nav-item.scroll-width {
+  min-width: 150rpx;
+}
+.order-nav .order-nav-item .bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 4rpx;
+  width: 50%;
+}
+.order-nav .flex1 {
+  flex: 1;
+}
+.order-nav::-webkit-scrollbar {
+  display: none;
+}

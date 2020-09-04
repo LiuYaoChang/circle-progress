@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "video-container" :"../../components/VideoContainer/index",
+    "sz-collapse" :"../../components/collapse/index",
+    "circle-progress" :"../../components/CircleProgress/index",
+    "canvas-ring": "/components/circle-progress/canvas-ring",
+    "mp-progress" :"mp-progress/component/mp-progress",
+    "wr-tab": "@retailwe/ui-tab/index"
+  }
+}

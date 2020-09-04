@@ -1,0 +1,8 @@
+<view
+  class="wr-divider wr-class {{hairline?'wr-divider--hairline':''}} {{dashed?'wr-divider--dashed':''}}  wr-divider--{{contentPosition}} "
+  style="{{ borderColor  ? 'border-color: ' + borderColor + ';' : '' }}{{ textColor ? 'color: ' + textColor + ';' : '' }}{{ customStyle }}"
+>
+  <view class="wr-divider__content wr-class-content">
+    <slot />
+  </view>
+</view>

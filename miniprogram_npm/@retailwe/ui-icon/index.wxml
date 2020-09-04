@@ -1,0 +1,33 @@
+<wxs module="utils">
+  var REGEXP = getRegExp('^\d+(\.\d+)?$');
+
+  function addUnit(value) {
+    if (value == null) {
+      return undefined;
+    }
+
+    return REGEXP.test('' + value) ? value + 'rpx' : value;
+  }
+
+  module.exports = {
+    addUnit: addUnit
+  };
+</wxs>
+
+<view
+  class="wr-icon wr-class {{classPrefix}} {{ isImageName ? 'wr-icon--image' : classPrefix + '-' + name }}"
+  style="color: {{color}}; font-size: {{utils.addUnit(size)}}; {{customStyle}}"
+>
+  <wr-info
+    wx:if="{{info || dot}}"
+    info="{{info}}"
+    dot="{{dot}}"
+    class="wr-icon__info"
+  ></wr-info>
+  <image
+    wx:if="{{ isImageName }}"
+    src="{{ name }}"
+    mode="aspectFit"
+    class="wr-icon__image"
+  />
+</view>

@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="usermotto" bind:tap="bindViewTap">
+    <text class="user-motto">订单</text>
+  </view>
+</view>

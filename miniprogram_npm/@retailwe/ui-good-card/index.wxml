@@ -1,0 +1,32 @@
+<view class="wr-goods-card card-class">
+  <view class="wr-goods-card__header {{ layout }} {{ centered ? 'wr-goods-card__header--center' : ''}}">
+    <view class="wr-goods-card__thumb thumb-class" bind:tap="onClickThumb">
+      <image wx:if="{{ thumb }}" src="{{ thumb }}" mode="{{ thumbMode }}" lazy-load="{{ lazyLoad }}" class="wr-goods-card__img" />
+      <slot name="thumb" />
+      <wr-tag wx:if="{{ tag }}" mark type="danger" wr-class="wr-goods-card__tag">{{ tag }}</wr-tag>
+    </view>
+    <view class="wr-goods-card__content">
+      <view wx:if="{{ title }}" class="wr-goods-card__title title-class">
+        <view class="wr-goods-card__title__prefix-tags">
+          <wr-tag class="prefix-tag" wx:for="{{ titlePrefixTags }}" wx:key="index" wx:for-item="titlePrefixTag" color="{{ titlePrefixTag.color || '#FF7940' }}">
+            {{ titlePrefixTag.text }}
+          </wr-tag>
+        </view>
+        {{ title }}
+      </view>
+      <slot wx:else name="title" />
+      <view wx:if="{{ desc }}" class="wr-goods-card__desc desc-class">{{ desc }}</view>
+      <slot wx:else name="desc" />
+      <slot name="tags" />
+      <view class="wr-goods-card__bottom">
+        <wr-price wx:if="{{ price || price === 0 }}" wr-class="wr-goods-card__price" symbol="{{currency}}" price="{{price}}" fill="{{priceFill}}"></wr-price>
+        <wr-price wx:if="{{ (originPrice || originPrice === 0) && isLinePriceBigger }}" wr-class="wr-goods-card__origin-price" symbol="{{currency}}" price="{{originPrice}}" fill="{{priceFill}}"></wr-price>
+        <view wx:if="{{num}}" class="wr-goods-card__num num-class">x {{ num }}</view>
+        <slot name="bottom" />
+      </view>
+    </view>
+  </view>
+  <view class="wr-goods-card__footer">
+    <slot name="footer" />
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="video-control">
+  <view class="video-control__body">
+    <view class="video-play-button" bind:tap="onPressPlay">
+      <image mode="aspectFit" src="{{playIcon}}"></image>
+    </view>
+    <view class="video-control__progress">
+      <video-progress buffered="{{buffered}}" time="{{time}}" duration="{{duration}}" bind:change="handleProgressChange"></video-progress>
+    </view>
+    <view class="video-control-button">
+      <view class="video-control-channel" bind:tap="onPressChannel">
+        <text class="video-channel__text">{{channel}}</text>
+      </view>
+      <view class="video-expend__icon" bind:tap="onPressExpend">
+        <image mode="aspectFit" src="{{fullIcon}}"></image>
+      </view>
+    </view>
+  </view>
+</view>

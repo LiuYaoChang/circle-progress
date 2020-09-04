@@ -1,0 +1,9 @@
+<view
+  wx:if="{{inserted > 0}}"
+  class="wr-toast__content wr-class {{show ? 'enter' : 'leave'}}"
+  style="z-index:{{zIndex}};font-size:{{fontSize}}rpx;color:{{textColor}};">
+  <view class="wr-toast__icon" wx:if="{{icon}}">
+    <wr-icon name="{{icon}}" color="{{iconColor}}" size="{{iconSize}}"/>
+  </view>
+  <view class="wr-toast__text">{{text}}</view>
+</view>

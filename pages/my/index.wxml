@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+
+  <button type="primary" bind:tap="handleChoose">上传</button>
+  <button bind:tap="handleDownload">下载</button>
+
+  <image src="{{filepath}}" />
+  <view class="usermotto">
+  
+    <text class="user-motto">个人中心</text>
+  </view>
+</view>

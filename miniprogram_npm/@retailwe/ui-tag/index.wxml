@@ -1,0 +1,13 @@
+<view
+  class="wr-class tag {{ 'tag--' + (type || 'default') }} {{ size ? 'tag--' + size : '' }} {{ mark ? 'tag--mark' : '' }} {{ plain ? 'tag--plain hairline--surround' : '' }} {{ round ? 'tag--round' : '' }}"
+  style="{{ color && !plain ? 'background-color: ' + color + ';' : '' }}{{ textColor || (color && plain) ? 'color: ' + (textColor || color) : '' }}"
+  bind:tap="onTap"
+>
+  <slot />
+  <wr-icon
+    wx:if="{{ closeable }}"
+    name="close"
+    wr-class="tag__close"
+    catch:tap="onClose"
+  />
+</view>

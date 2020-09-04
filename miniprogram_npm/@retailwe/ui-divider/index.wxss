@@ -1,0 +1,44 @@
+.wr-divider {
+  display: flex;
+  align-items: center;
+  border-style: solid;
+  border-width: 0;
+  color: #ccc;
+}
+.wr-divider::before,
+.wr-divider::after {
+  display: block;
+  flex: 1;
+  box-sizing: border-box;
+  height: 1px;
+  border-color: inherit;
+  border-style: inherit;
+  border-width: 1px 0 0;
+}
+.wr-divider::before {
+  content: '';
+}
+.wr-divider--hairline::before,
+.wr-divider--hairline::after {
+  transform: scaleY(0.5);
+}
+.wr-divider--dashed {
+  border-style: dashed;
+}
+.wr-divider--center::before,
+.wr-divider--left::before,
+.wr-divider--right::before {
+  margin-right: 10px;
+}
+.wr-divider--center::after,
+.wr-divider--left::after,
+.wr-divider--right::after {
+  content: '';
+  margin-left: 10px;
+}
+.wr-divider--left::before {
+  max-width: 30px;
+}
+.wr-divider--right::after {
+  max-width: 30px;
+}

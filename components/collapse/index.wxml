@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="collapse-item">
+  <view class="collapse-item__header {{ open ? 'clollapse-item__opened' : '' }}" bind:tap="handleTapHeader">
+    <view class="collapse-item__title">
+      <text>{{title}}</text>
+    </view>
+    <view class="collapse-arrow">
+      <image mode="aspectFit" src="{{arrowIcon}}"></image>
+    </view>
+  </view>
+  <view class="collapse-item__body" hidden="{{!open}}">
+    <slot></slot>
+  </view>
+</view>

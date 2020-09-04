@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view class="home-page">
+<view class="centered">
+  <canvas-ring slot="{{true}}" id="canvasRing" suffix="%" canvasWidth="{{50}}" lineWidth="{{1}}" value="{{c_val}}" title="">
+    <!-- <view class="circle-progress-content">
+      <view class="rect"></view>
+      <view class="rect"></view>
+      <view class="rect"></view>
+      <view class="rect"></view>
+      <view class="rect"></view>
+    </view> -->
+  </canvas-ring>
+</view>
+
+<!-- <view class="centered">
+  <canvas-ring id="varyRing" value="{{vary_val}}" title="看我七十二变" maxValue="72" minValue="0" suffix="变" startDegree="{{vary_start}}" lineWidth="{{vary_lineW}}" lineColor="{{vary_color}}" canvasWidth="{{vary_width}}" valueColor="{{val_color}}"></canvas-ring>
+</view> -->
+
+  <!-- <view class="video__wrap">
+    <view class="video-title">
+      PMP2019考前辅导说明会进阶全程班春季2班
+    </view>
+    <video-container options="{{channelTypes}}" />
+  </view> -->
+  <!-- <view class="course-info-container">
+    <view class="course-info-tabs">
+      <wr-tab
+        lineColor="#54B0FB"
+        status="{{tabIndex}}"
+        bind:tabChange="handleTabChange"
+        tabList="{{list}}"
+      />
+    </view>
+    <view class="course-tabs__content">
+      <view class="course-tab-item course-detail__tab" hidden="{{tabIndex !== 1}}">
+        详情
+      </view>
+      <view class="course-tab-item course-list__tab" hidden="{{tabIndex !== 2}}">
+        <sz-collapse title="标题名称">
+          <view class="course">内容</view>
+        </sz-collapse>
+      </view>
+      <view class="course-tab-item course-comment__tab" hidden="{{tabIndex !== 3}}">
+        评论
+      </view>
+    </view>
+
+  </view> -->
+
+</view>

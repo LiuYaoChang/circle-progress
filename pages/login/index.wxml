@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="login-page">
+  <view class="progress-box">
+    <progress percent="60" active stroke-width="3" />
+  </view>
+  
+
+</view>

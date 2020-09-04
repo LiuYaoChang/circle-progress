@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wr-loading": "@retailwe/ui-loading/index",
+    "wr-divider": "@retailwe/ui-divider/index"
+  }
+}

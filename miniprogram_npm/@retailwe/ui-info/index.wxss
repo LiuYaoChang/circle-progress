@@ -1,0 +1,22 @@
+.wr-info {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  white-space: nowrap;
+  text-align: center;
+  transform: translate(50%, -50%);
+  transform-origin: 100%;
+  font-size: 16rpx;
+  padding: 0 6rpx;
+  color: white;
+  background-color: red;
+  border-radius: 16rpx;
+  line-height: 1.5;
+}
+.wr-info.dot {
+  border-radius: 50%;
+  width: 12rpx;
+  height: 12rpx;
+}

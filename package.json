@@ -1,0 +1,34 @@
+{
+  "name": "sz_compitetion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@retailwe/ui-divider": "0.0.14",
+    "@retailwe/ui-goods-list": "0.0.15",
+    "@retailwe/ui-icon": "0.0.15",
+    "@retailwe/ui-info": "0.0.14",
+    "@retailwe/ui-load-more": "0.0.14",
+    "@retailwe/ui-loading": "0.0.14",
+    "@retailwe/ui-popup": "0.0.16",
+    "@retailwe/ui-pull-down-refresh": "0.0.14",
+    "@retailwe/ui-tab": "0.0.14",
+    "@retailwe/ui-tag": "0.0.14",
+    "@retailwe/ui-toast": "0.0.14",
+    "flyio": "^0.6.14",
+    "mp-progress": "^1.2.12",
+    "throttle-debounce": "^2.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-ruby-sass": "^4.0.0",
+    "gulp-sass": "^4.1.0"
+  }
+}

@@ -1,0 +1,16 @@
+<view class="goods-list-wrap wr-class {{layout}}">
+  <view wx:for="{{goodsList}}" wx:for-item="item" wx:key="index" catchtap="onClickGood" data-index="{{index}}">
+    <wr-goods-card card-class="{{index === goodsList.length - 1 ? 'no-border' : ''}}" layout="{{item.layout || layout}}" price="{{item.price}}" origin-price="{{item.originPrice}}" currency="{{item.currency}}" title="{{item.title}}" desc="{{desc}}" thumb="{{item.thumb}}" fill="{{priceFill}}" lazy-load="{{lazyLoad}}">
+      <view slot="tags" class="wr-goods-card__tags">
+        <view class="goods-card-tags-wrap">
+          <wr-tag color="#FA550F" size="28" plain wx:for="{{item.tags}}" wx:for-item="tag" wx:key="index">
+            {{tag.title}}
+          </wr-tag>
+        </view>
+      </view>
+      <view slot="bottom" class="goods-add-cart">
+        <wr-add-cart wr-class="add-cart-icon" goodsInfo="{{item}}" icon="add-cart" size="48" color="#FA550F" data-index="{{index}}" outerService="{{outerService}}" bindclick="onAddCart" />
+      </view>
+    </wr-goods-card>
+  </view>
+</view>

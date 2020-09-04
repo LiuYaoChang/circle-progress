@@ -1,0 +1,10 @@
+<view wx:if="{{ isShow || !destroyOnClose }}" hidden="{{!isShow}}" class="wr-class" catchtap="noop" catch:touchmove="{{catchTouchMove ? 'noop' : ''}}">
+  <view class="popup__mask" wx:if="{{ mask }}" catch:tap="bindTapMask" style="{{ animationStyle.mask }} z-index:{{ zIndex - 1 }}; position:{{ fixed ? 'fixed' : 'absolute' }}; background-color:{{ maskColor }};{{ maskStyle }}"></view>
+  <view class="classname popup__content popup__content--{{ position }}" catch:touchmove="{{ forbideScroll ? 'noop' : '' }}" style="{{ animationStyle.content }}z-index:{{ zIndex }};position:{{ fixed ? 'fixed' : 'absolute' }}; {{contentStyle}}">
+    <view class="popup__cancel" wx:if="{{ isIcon }}">
+      <slot name="close_icon" capture-catch:tap="close"></slot>
+    </view>
+    <slot></slot>
+    <view class="bottom-safe-area" style="{{bottomSafeAreaStyle}}"></view>
+  </view>
+</view>

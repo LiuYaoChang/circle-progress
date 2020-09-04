@@ -1,0 +1,25 @@
+<wxs module="utils">
+  function addUnit(value) {
+    return value ? value + 'rpx' : '';
+  }
+  module.exports = { addUnit: addUnit };
+</wxs>
+
+<view class="order-nav wr-class" catchtap="tabChange">
+  <view
+    wx:for="{{tabList}}"
+    wx:key="key"
+    class="order-nav-item flex1 {{isScroll ? 'scroll-width' : ''}} {{item.key === status ? 'active wr-class-active' : ''}}"
+    style="color: {{item.key === status ? lineColor ? lineColor : '#0071CE' : ''}};"
+  >
+    <text
+      data-status="{{item.key}}"
+      class="txt"
+    >{{item.text}}</text>
+    <view
+      wx:if="{{item.key === status}}"
+      class="bottom-line"
+      style="height: {{utils.addUnit(lineHeight)}}; width: {{utils.addUnit(lineWidth)}}; background-color: {{lineColor ? lineColor : '#0071CE'}};"
+    ></view>
+  </view>
+</view>

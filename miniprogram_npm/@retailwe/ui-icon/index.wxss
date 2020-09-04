@@ -1,0 +1,21 @@
+@import "./iconfont.wxss";
+:host {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.wr-icon {
+  position: relative;
+}
+.wr-icon--image {
+  width: 1em;
+  height: 1em;
+}
+.wr-icon__image {
+  width: 100%;
+  height: 100%;
+}
+.wr-icon__info {
+  z-index: 1;
+}

@@ -1,0 +1,5 @@
+<view
+  wx:if="{{dot || info}}"
+  class="wr-class wr-info {{ dot ? 'dot' : 'info' }}"
+  style="{{ customStyle }}"
+>{{ dot ? '' : info }}</view>
